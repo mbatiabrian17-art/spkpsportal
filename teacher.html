@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Records</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header>Teacher Records</header>
+
+<main>
+    <h2>All Registered Teachers</h2>
+    <p>Below is a list of all teachers stored in the system database.</p>
+
+    <div class="controls">
+        <input type="text" id="teacherSearch" placeholder="Search by name or TSC number">
+        <button id="searchTeacherBtn" class="search-btn">Search</button>
+       
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>TSC No</th>
+                    <th>Name</th>
+                    <th>Subject</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="teacherTable"></tbody>
+        </table>
+    </div>
+
+    <div class="record-actions">
+        <button id="editTeacherBtn" class="edit-btn">Edit</button>
+        <button id="deleteTeacherBtn" class="delete-btn">Delete</button>
+        <button id="saveTeacherBtn" class="save-btn">Save</button>
+        <button onclick="window.location.href='/dashboard'">
+    ← Back to Dashboard
+</button>
+         <button id="addTeacherBtn" class="add-btn">+ Add Teacher</button>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 My School Portal. All rights reserved.
+</footer>
+
+<script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+</body>
+</html>

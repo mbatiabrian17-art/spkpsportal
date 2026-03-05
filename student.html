@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Records</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header>Student Records</header>
+
+<main>
+    <h2>All Registered Students</h2>
+    <p>Below is a list of all students stored in the system database.</p>
+
+    <div class="controls">
+        <input type="text" id="studentSearch" placeholder="Search by name, grade or admission no">
+        <button id="searchStudentBtn" class="search-btn">Search</button>
+        
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Admission No</th>
+                    <th>Name</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody id="studentTable"></tbody>
+        </table>
+    </div>
+
+    <div class="record-actions">
+        <button id="editBtn" class="edit-btn">Edit</button>
+        <button id="deleteBtn" class="delete-btn">Delete</button>
+        <button id="saveBtn" class="save-btn">Save</button>
+       <button onclick="window.location.href='/dashboard'">
+    ← Back to Dashboard
+</button>
+        <button id="addBtn" class="add-btn">+ Add Student</button>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 My School Portal. All rights reserved.
+</footer>
+
+<script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+</body>
+</html>

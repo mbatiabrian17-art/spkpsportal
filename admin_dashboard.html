@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header>School Portal Dashboard</header>
+
+<main>
+    <p>This dashboard gives you secure access to both Student and Teacher records in one centralized system.
+
+Select the category you would like to manage to view detailed information and perform record updates.
+
+Within each section, you can:
+
+<ul class="activity-list">
+    <li>Add new records</li>
+    <li>Edit existing information</li>
+    <li>Delete outdated entries</li>
+    <li>Save and organize updates efficiently</li>
+</ul>
+
+Please choose a record category to begin.
+</p>
+    <div class="dashboard-buttons">
+       <button onclick="window.location.href='{{ url_for('students_page') }}'">Students</button>
+<button onclick="window.location.href='{{ url_for('teachers_page') }}'">Teachers</button>
+    </div>
+
+    <div class="dashboard-logout">
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 My School Portal. All rights reserved.
+</footer>
+
+<script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+</body>
+</html>

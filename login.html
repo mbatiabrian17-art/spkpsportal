@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="login-body">
+
+    <div class="login-wrapper">
+        <div class="login-card">
+            <div class="login-header">
+                <h1>Secure Portal Access</h1>
+                <p>Please enter your username and password to continue</p>
+            </div>
+
+            <!-- ✅ FLASK LOGIN FORM -->
+            <form method="POST" action="/login">
+                
+                <div class="input-group">
+                    <input type="text" name="username" placeholder="Enter Username" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Enter Portal
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
